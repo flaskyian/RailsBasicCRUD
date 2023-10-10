@@ -1,0 +1,24 @@
+<% content_for :title do %>
+  Edit
+<% end %>
+
+<div class="d-flex p-4 flex-column">
+  <a href="/departments/view/<%= @department.abbreviation %>">Back</a>
+  <form action="/departments/update/<%= @department.id %>" method="post">
+    <div>
+      <label for="abbreviation">Abbreviation</label><br>
+      <input type="text" name="abbreviation" id="abbreviation" value="<%= @department.abbreviation %>">
+    </div>
+    <div>
+      <label for="name">Name</label><br>
+      <input type="text" name="name" id="name" value="<%= @department.name %>">
+    </div>
+    <div>
+      <label for="description">Description</label><br>
+      <textarea name="description" id="description"><%= @department.description %></textarea>
+    </div>
+    <div>
+      <input type="submit" class="btn btn-success" value="Update Department">
+    </div>
+  </form>
+</div>

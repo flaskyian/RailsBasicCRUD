@@ -1,0 +1,17 @@
+<% content_for :title do %>
+  Main
+<% end %>
+
+<div class="d-flex p-4 flex-column">
+  <h1 class="m-sm title">Departments</h1>
+  <ul>
+    <% @departments.each do |department| %>
+      <li>
+        <a href="/departments/view/<%= department.abbreviation %>">
+          <%= department.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <a href="/departments/new"><button class="btn btn-success">Create New</button></a>
+</div>

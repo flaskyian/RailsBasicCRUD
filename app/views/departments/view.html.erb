@@ -1,0 +1,12 @@
+<% content_for :title do %>
+  <%= @department.abbreviation %>
+<% end %>
+
+<div class="d-flex p-4 flex-column">
+    <a href="/departments">Back</a>
+    <h1><%= @department.name %></h1>
+
+    <p><%= @department.description %></p>
+    <a href="/departments/delete/<%= @department.id %>">Delete</a>
+    <a href="/departments/edit/<%= @department.id %>">Edit</a>
+</div>
